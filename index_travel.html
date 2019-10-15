@@ -1,0 +1,258 @@
+<html style="" class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths"><head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Plan Your Travel</title>
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="manifest" href="manifest.json">
+
+        <link rel="stylesheet" href="resource/css/travel/bootstrap.min.css">
+        <link rel="stylesheet" href="resource/css/travel/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="resource/css/travel/fontAwesome.css">
+        <link rel="stylesheet" href="resource/css/travel/travel.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css">
+        
+		<script src="resource/js/travel/vendor/jquery-1.11.2.min.js"></script>
+		<script src="resource/js/travel/vendor/bootstrap.min.js"></script>
+        <script src="resource/js/travel/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="resource/js/plugins/jquery-ui/jquery-ui.min.js"></script>
+        <script src="resource/js/plugins/jquery-ui/touch-dnd.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+        
+		<script src="resource/js/travel/jquery.modal.js"></script>
+		<link href="resource/css/travel/jquery.modal.css" rel="stylesheet">
+		<link href="resource/css/travel/jquery.modal.theme-xenon.css" rel="stylesheet">
+		<link href="resource/css/travel/jquery.modal.theme-atlant.css" rel="stylesheet">
+		
+        <script src="resource/js/travel/app.js"></script>
+    </head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <nav class="navbar navbar-inverse" role="navigation">
+                <div class="navbar-header">
+                	<div class="dropdown">
+						<button class="dropbtn"><i class="fa fa-bell" style="font-size:25px;"></i></button>
+						<span class="badge">1</span>
+						<div class="dropdown-content"><a href="#" class="cnt" id="0" onclick="callFunction(0);">이슬님이 TEST를 공유했습니다.</a></div>
+					</div>
+                    <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand scroll-top">
+                        <!-- <div class="logo"></div> -->
+                    </a>
+                </div>
+                <!--/.navbar-header-->
+                <div id="main-nav" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#" class="scroll-top">Home</a></li>
+                        <li><a href="#" class="scroll-link" data-id="myTravel">My Travel</a></li>
+                        <li><a id="logoutBtn" href="/service/logout">Log Out</a></li>
+                    </ul>
+                </div>
+                <!--/.navbar-collapse-->
+            </nav>
+            <!--/.navbar-->
+        </div>
+        <!--/.container-->
+    </div>
+    <!--/.header-->
+
+
+    <section class="cd-hero">
+        <ul class="cd-hero-slider">  
+            <li class="selected first-slide">
+                <div class="cd-full-width">
+                    <div class="tm-slide-content-div slide-caption">
+                        <h2>PLAN YOUR TRAVEL</h2>
+                        <div class="primary-button"><a id="hNewBtn" href="javascript: openSidebar('createTravel');">Create</a></div>
+                    </div>
+                </div> <!-- .cd-full-width -->
+            </li>
+        </ul> <!-- .cd-hero-slider -->
+
+        <div class="cd-slider-nav">
+            <nav>
+                <span class="cd-marker item-1"></span>
+                
+                <ul>
+                    <li class="selected"><a href="#0"></a></li>
+                    <li><a href="#0"></a></li>
+                    <li><a href="#0"></a></li>                        
+                </ul>
+            </nav> 
+        </div> <!-- .cd-slider-nav -->
+    </section> <!-- .cd-hero -->
+
+    <div id="myTravel" class="page-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <h4>My Travel</h4>
+                        <div class="line-dec"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="travelListDiv" class="row travel-list"><div class="col-md-3 col-sm-6 col-xs-12"><div class="travel-item is-selected" data-travel-no="31"><a class="travel-edit" data-travel-obj="{&quot;TRAVEL_DESC&quot;:&quot;Singapore trip&quot;,&quot;TRAVEL_START_DATE&quot;:&quot;20190908&quot;,&quot;TRAVEL_END_DATE&quot;:&quot;20190911&quot;,&quot;TRAVEL_TITLE&quot;:&quot;Singapore 2019&quot;,&quot;TRAVEL_NO&quot;:31}" style="text-decoration:none;"></a><h4>Singapore 2019</h4><p>Singapore trip</p><p>2019/09/08 - 2019/09/11</p></div></div><div class="col-md-3 col-sm-6 col-xs-12"><div class="travel-item" data-travel-no="34"><a class="travel-edit" data-travel-obj="{&quot;TRAVEL_DESC&quot;:&quot;New Travel Description !&quot;,&quot;TRAVEL_START_DATE&quot;:&quot;20190930&quot;,&quot;TRAVEL_END_DATE&quot;:&quot;20191004&quot;,&quot;TRAVEL_TITLE&quot;:&quot;New Travel&quot;,&quot;TRAVEL_NO&quot;:34}" style="text-decoration:none;"></a><h4>New Travel</h4><p>New Travel Description !</p><p>2019/09/30 - 2019/10/04</p></div></div><div class="col-md-3 col-sm-6 col-xs-12"><div class="travel-item" data-travel-no="35"><a class="travel-edit" data-travel-obj="{&quot;TRAVEL_DESC&quot;:&quot;TEST&quot;,&quot;TRAVEL_START_DATE&quot;:&quot;20190927&quot;,&quot;TRAVEL_END_DATE&quot;:&quot;20190927&quot;,&quot;TRAVEL_TITLE&quot;:&quot;TEST&quot;,&quot;TRAVEL_NO&quot;:35}" style="text-decoration:none;"></a><h4>TEST</h4><p>TEST</p><p>2019/09/27 - 2019/09/27</p></div></div></div>
+        </div>
+    </div>
+    
+    <div id="itinerary" class="page-section" style="">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <h4 id="itineraryTitle">Singapore 2019 - Itinerary</h4>
+                        <div class="line-dec"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row itinerary-section">
+            	<input type="hidden" id="travelNo" name="travelNo" value="31">
+            	<div id="editScheBtnDiv" class="white-button itinerary-button"><a id="editScheBtn">Edit</a></div>
+            	<div id="saveScheBtnDiv" class="white-button itinerary-button" style="display:none;">
+            		<a id="cancelScheBtn">Cancel</a>
+            		<a id="saveScheBtn" style="margin-left: 10px;">Save</a>
+            	</div>
+            	<ul id="itineraryListUl" class="itinerary-list"><li class="sche-date" data-sche-date="20190908"><span>Day1 - 2019/09/08</span><div class="primary-button itinerary-button add-sche-btn"><a onclick="javascript: addSchedule('', '20190908')">Add</a></div><ul class="sche-item-list"><li class="sche-item" data-delete-flag="" data-sche-seq="1"><i class="fa fa-minus-circle sche-delete-btn" aria-hidden="true"></i><div class="sche-info"><h4>센토사 섬</h4><span>케이블카 - 클룩 할인 예약</span></div><i class="fa fa-arrows-v sche-move-btn" aria-hidden="true"></i></li><li class="sche-item" data-delete-flag="" data-sche-seq="4"><i class="fa fa-minus-circle sche-delete-btn" aria-hidden="true"></i><div class="sche-info"><h4>Universal Studio</h4><span>Ticket</span></div><i class="fa fa-arrows-v sche-move-btn" aria-hidden="true"></i></li></ul></li><li class="sche-date" data-sche-date="20190909"><span>Day2 - 2019/09/09</span><div class="primary-button itinerary-button add-sche-btn"><a onclick="javascript: addSchedule('', '20190909')">Add</a></div><ul class="sche-item-list"><li class="sche-item" data-delete-flag="" data-sche-seq="3"><i class="fa fa-minus-circle sche-delete-btn" aria-hidden="true"></i><div class="sche-info"><h4>Esplanade</h4><span>Piano Recital</span></div><i class="fa fa-arrows-v sche-move-btn" aria-hidden="true"></i></li></ul></li><li class="sche-date" data-sche-date="20190910"><span>Day3 - 2019/09/10</span><div class="primary-button itinerary-button add-sche-btn"><a onclick="javascript: addSchedule('', '20190910')">Add</a></div><ul class="sche-item-list"></ul></li><li class="sche-date" data-sche-date="20190911"><span>Day4 - 2019/09/11</span><div class="primary-button itinerary-button add-sche-btn"><a onclick="javascript: addSchedule('', '20190911')">Add</a></div><ul class="sche-item-list"></ul></li></ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="sidebar">
+	    <div class="sidebar-content">
+	        <form id="createTravel" style="display: none;" method="post" action="/service/travel/createTravel">
+	            <h3>Create Travel</h3>
+	            <label for="createTitle">Title</label>
+	            <input id="createTitle" name="createTitle" type="text">
+	            <label for="createDesc">Description</label>
+	            <input id="createDesc" name="createDesc" type="text">
+	            <label for="createPeriod">Period</label>
+	            <input id="createPeriod" class="form-control" type="text">
+	            <input id="createStartDate" name="createStartDate" type="text" style="display:none">
+	            <input id="createEndDate" name="createEndDate" type="text" style="display:none">
+	            <div class="buttons">
+	                <div class="white-button"><a href="javascript: cancelSidebar('createTravel');">Cancel</a></div>
+	                <div class="primary-button"><a id="createBtn" href="#">Create Travel</a></div>
+	            </div>
+	        </form>
+	        <form id="editTravel" style="display: none;" method="post" action="/service/travel/editTravel">
+	            <h3>Edit Travel</h3>
+	            <input id="editTravelNo" name="editTravelNo" type="text" style="display:none">
+	            <label for="editTitle">Title</label>
+	            <input id="editTitle" name="editTitle" type="text">
+	            <label for="editDesc">Description</label>
+	            <input id="editDesc" name="editDesc" type="text">
+	            <label for="editPeriod">Period</label>
+	            <input id="editPeriod" class="form-control" type="text">
+	            <input id="editStartDate" name="editStartDate" type="text" style="display:none">
+	            <input id="editEndDate" name="editEndDate" type="text" style="display:none">
+	            <div class="buttons">
+	            	<div class="white-button"><a href="javascript: cancelSidebar('editTravel');">Cancel</a></div>
+	            	<div class="primary-button"><a id="deleteBtn" href="#">Delete</a></div>
+	                <div class="primary-button"><a id="saveBtn" href="#">Save</a></div>
+	            </div>
+	        </form>
+	        <form id="addSchedule" style="display: none;" method="post" action="/service/travel/addSchedule">
+	            <h3>Add Schedule</h3>
+	            <input id="addScheTravelDate" name="addScheTravelDate" type="text" style="display:none">
+	            <label for="scheTravelDate">Date</label>
+	            <input id="scheTravelDate" type="text" readonly="">
+	            <label for="addSchePlace">Place</label>
+	            <input id="addSchePlace" name="addSchePlace" type="text">
+	            <label for="addScheMemo">Memo</label>
+	            <input id="addScheMemo" name="addScheMemo" type="text">
+	            <div class="buttons">
+	            	<div class="white-button"><a href="javascript: cancelSidebar('addSchedule');">Cancel</a></div>
+	                <div class="primary-button"><a id="addScheBtn" href="#">Add</a></div>
+	            </div>
+	        </form>
+	    </div>
+	</div>
+	
+	<div class="container">
+	  <!-- <h2>Modal Example</h2>
+	  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button> -->
+	
+	  <!-- Modal -->
+	  <div class="modal fade" id="myModal" role="dialog">
+	    <div class="modal-dialog">
+	    
+	      <!-- Modal content-->
+	      <div class="modal-content">
+	        <div class="modal-header" style="background-color:#a2cf8d;">
+	          <button type="button" class="close" data-dismiss="modal">×</button>
+	          <h4 id="modalTitle" class="modal-title">Modal Header</h4>
+	        </div>
+	        <div class="modal-body">
+	          <div class="table-users">
+			          <table class="table-list">
+							<caption id="travelDesc"></caption>
+							<colgroup>
+								<col width="10%">
+							    <col width="40%">
+								<col width="50%">
+							</colgroup>
+							<thead>
+							</thead>
+							<tbody id="travelList">
+							</tbody>
+						</table>
+					</div>
+				</div> 
+	        <div class="modal-footer" style="background-color:#a2cf8d;">
+	          <button type="button" class="acceptBtn">Accept</button>
+	          <button type="button" class="rejectBtn">Reject</button>
+	          <!-- <button type="button" id="closeBtn" class="btn btn-default" data-dismiss="modal">Close</button> -->
+	        </div>
+	      </div>
+	      
+	    </div>
+	  </div>
+	  <a href="#" id="alert">Alert</a>
+	  
+	</div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="copyright-text">
+                        <p>Copyright © 2019 LG CNS</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="social-icons">
+                        <ul>
+                            <li>
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-rss"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-dribbble"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<div class="daterangepicker ltr show-calendar opensright"><div class="ranges"></div><div class="drp-calendar left"><div class="calendar-table"></div><div class="calendar-time" style="display: none;"></div></div><div class="drp-calendar right"><div class="calendar-table"></div><div class="calendar-time" style="display: none;"></div></div><div class="drp-buttons"><span class="drp-selected"></span><button class="cancelBtn btn btn-sm btn-default" type="button">Cancel</button><button class="applyBtn btn btn-sm btn-primary" disabled="disabled" type="button">Apply</button> </div></div><div class="daterangepicker ltr show-calendar opensright"><div class="ranges"></div><div class="drp-calendar left"><div class="calendar-table"></div><div class="calendar-time" style="display: none;"></div></div><div class="drp-calendar right"><div class="calendar-table"></div><div class="calendar-time" style="display: none;"></div></div><div class="drp-buttons"><span class="drp-selected"></span><button class="cancelBtn btn btn-sm btn-default" type="button">Cancel</button><button class="applyBtn btn btn-sm btn-primary" disabled="disabled" type="button">Apply</button> </div></div></body></html>
