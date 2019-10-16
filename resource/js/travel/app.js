@@ -86,6 +86,27 @@ $( document ).ready(function() {
 		
 		$(".sche-item-list").sortable("disable");
 	});
+	
+	$(".sche-item-list").sortable({
+		items: "> li",
+		handle: ".sche-move-btn",
+		connectWith: ".sche-item-list"
+	});
+	$( ".sche-item-list" ).sortable( "option", "scroll", false );
+	$(".sche-item-list").sortable("disable");
+	$(".sche-item-list").disableSelection();
+	$(".sche-date").disableSelection();
+	
+	$("#saveScheBtnDiv").hide();
+	$("#editScheBtnDiv").show();
+	
+	$(".sche-delete-btn").click(function(e){
+		$(this).parent("li").addClass("deleted");
+	});
+	$(".sche-item").on("transitionend", function(){
+		$(this).hide();
+		$(this).attr("data-delete-flag", "Y");
+	});
 });
 
 //scroll function
