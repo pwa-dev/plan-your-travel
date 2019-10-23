@@ -22,7 +22,7 @@ var filesToCache = [
   ,"./resource/images/icon/travel_512.png"
   ,"./resource/images/travel/blog-bg.png"
   ,"./resource/images/travel/header-image.jpg"
-  ,"./resource/images/travel/travelImg.png"
+  ,"./resource/images/travel/travelImg.jpg"
   ,"./resource/css/travel/fonts/fontawesome-webfont.ttf"
   ,"https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
   ,"https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"
