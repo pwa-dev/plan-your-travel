@@ -1,5 +1,5 @@
 // Initialize required variables - Cache Assets
-var shellCacheName = "pwa-travel-v1.1";
+var shellCacheName = "pwa-travel-v1.2";
 var filesToCache = [
   "./"
   ,"./index_travel.html"
@@ -17,6 +17,13 @@ var filesToCache = [
   ,"./resource/js/plugins/jquery-ui/jquery-ui.min.js"
   ,"./resource/js/plugins/jquery-ui/touch-dnd.js"
   ,"./resource/js/travel/jquery.modal.js"
+  ,"./resource/images/icon/travel_32.png"
+  ,"./resource/images/icon/travel_128.png"
+  ,"./resource/images/icon/travel_512.png"
+  ,"./resource/images/travel/blog-bg.png"
+  ,"./resource/images/travel/header-image.jpg"
+  ,"./resource/images/travel/travelImg.png"
+  ,"./resource/css/travel/fonts/fontawesome-webfont.ttf"
   ,"https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
   ,"https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"
   ,"https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"
