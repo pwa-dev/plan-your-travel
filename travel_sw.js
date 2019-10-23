@@ -1,5 +1,5 @@
 // Initialize required variables - Cache Assets
-var shellCacheName = "pwa-travel-v1.2";
+var shellCacheName = "pwa-travel-v1.3";
 var filesToCache = [
   "./"
   ,"./index_travel.html"
